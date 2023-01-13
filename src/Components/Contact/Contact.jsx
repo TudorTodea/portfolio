@@ -61,7 +61,7 @@ const Contact = () => {
                         </Col>
                         <Col>
                         <textarea row="6" value={formDetails.message} placeholder="Message"onChange={(e)=>onFormUpdate('message',e.target.value)}/>
-                        <TrackVisibility once offset={30} >
+                        <TrackVisibility once offset={450} >
                     {({isVisible})=>
                      <div className={isVisible ? "animate__animated animate__fadeInUp":"animate__animated animate__fadeOutUp"}>
                         <button type="submit"><span>{buttonText}</span></button>
