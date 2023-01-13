@@ -106,6 +106,7 @@ nav.navbar {
     z-index: 1;
     color:#fff;
     height: 100%;
+    width: 100%;
   }
 
   .navbar-text button::before {
