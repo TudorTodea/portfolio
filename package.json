@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "bootstrap": "^5.2.3",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.0",
@@ -16,6 +17,7 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
     "react-multi-carousel": "^2.8.2",
+    "react-on-screen": "^2.1.1",
     "react-router-dom": "^6.6.2"
   },
   "devDependencies": {

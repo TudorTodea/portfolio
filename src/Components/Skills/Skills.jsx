@@ -10,6 +10,7 @@ import MaterialUiImg from '../../assets//img/material-ui-logo.svg'
 import HtmlImg from '../../assets//img/html-logo.svg'
 import CssImg from '../../assets//img/css-logo.svg'
 import GitImg from '../../assets//img/git-logo.svg'
+import TrackVisibility from 'react-on-screen';
 import './Skills.css'
 const Skills = () => {
     const responsive = {
@@ -31,6 +32,9 @@ const Skills = () => {
       };
   return (
     <section className="skill" id="skills">
+          <TrackVisibility once offset={300} >
+                 {({isVisible})=>
+                  <div className={isVisible ? "animate__animated animate__fadeIn":"animate__animated animate__fadeOut"}>
         <div className='container'>
         <div className="col-12">
                 <div className="skill-bx wow zoomIn">
@@ -80,6 +84,7 @@ const Skills = () => {
     
     </div>
   </div>
+  </div>}</TrackVisibility>
   </section>
   )
 }

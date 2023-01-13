@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import './Contact.css'
 import ContactSvg from '../../assets/img/contact.svg'
+import TrackVisibility from 'react-on-screen';
 const Contact = () => {
     const formInitialDetails={
         firstName:'',
@@ -28,14 +29,25 @@ const Contact = () => {
         <Row className="align-items-center">
         
         <Col md={6}>
+        <TrackVisibility once offset={300} >
+                    {({isVisible})=>
+                     <div className={isVisible ? "animate__animated animate__fadeInUp":"animate__animated animate__fadeOutUp"}>
                     <img src={ContactSvg} alt='Contact Me'/>
+                    </div>}
+                    </TrackVisibility>
                 </Col>
             <Col md={6}>
+            <TrackVisibility once  >
+                    {({isVisible})=>
+                     <div className={isVisible ? "animate__animated animate__fadeInDown":"animate__animated animate__fadeOutDown"}>
                 <h2>Get In Touch</h2>
+                </div>}</TrackVisibility>
                 <form onSubmit={handleSubmit}>
-                    <Row>
-                   
+                <TrackVisibility once offset={200} >
+                    {({isVisible})=>
+                    <Row className={isVisible ? "animate__animated animate__fadeInRight":"animate__animated animate__fadeOutRight"}>
                         <Col sm={6} className="px-1">
+                      
                             <input type='text' value={formDetails.firstName} placeholder='First Name' onChange={(e)=>onFormUpdate('firstName',e.target.value)}/>
                         </Col>
                         <Col sm={6} className="px-1">
@@ -49,7 +61,11 @@ const Contact = () => {
                         </Col>
                         <Col>
                         <textarea row="6" value={formDetails.message} placeholder="Message"onChange={(e)=>onFormUpdate('message',e.target.value)}/>
+                        <TrackVisibility once offset={30} >
+                    {({isVisible})=>
+                     <div className={isVisible ? "animate__animated animate__fadeInUp":"animate__animated animate__fadeOutUp"}>
                         <button type="submit"><span>{buttonText}</span></button>
+                        </div>}</TrackVisibility>
                         </Col>
                         {
                             status.message&&
@@ -58,7 +74,8 @@ const Contact = () => {
                             </Col>
                             
                         }
-                    </Row>
+
+                    </Row>}</TrackVisibility>
                 </form>
             </Col>
         </Row>

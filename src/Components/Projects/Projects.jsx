@@ -6,7 +6,7 @@ import MovieVideo from '../../assets/img/movieApp.mp4'
 import CommunityVideo from '../../assets/img/communityApp.mp4'
 import HexGameVideo from '../../assets/img/hexGame.mp4'
 import ModernDesignsVideo from '../../assets/img/ModernDesigns.mp4'
-
+import TrackVisibility from 'react-on-screen';
 
 const Projects = () => {
 
@@ -53,10 +53,15 @@ const Projects = () => {
     <Container>
       <Row>
         <Col>
-        <h2>
+        <TrackVisibility once  offset={100}>
+        {({isVisible})=>
+        <h2 className={isVisible ? "animate__animated animate__fadeInDown":"animate__animated animate__fadeOutDown"}>
           Projects
           </h2>
-          <Row >
+}</TrackVisibility>
+          <TrackVisibility once offset={350} >
+                    {({isVisible})=>
+          <Row className={isVisible ? "animate__animated animate__fadeInUp":"animate__animated animate__fadeOutUp"}>
                   {
                     projects.map((project,index)=>{
                       return(
@@ -79,7 +84,7 @@ const Projects = () => {
                  <div className='boxMore'>
                   <a  href='https://github.com/TudorTodea/'>+ MORE</a>
                   </div>
-                </Row>
+                </Row>}</TrackVisibility>
           </Col>
           </Row>
           </Container>
