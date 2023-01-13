@@ -89,15 +89,23 @@ nav.navbar {
     font-weight: 700;
     color: #fff;
     border: 1px solid #fff;
-    padding: 10px 15px;
     font-size: 18px;
     margin-left: 18px;
       position: relative;
       background-color: transparent;
       transition: 0.3s ease-in-out;
+      height: 70px;
+      width: 150px;
   }
-  .navbar-text button span {
+  .navbar-text button a {
+    display: inline-flex; 
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
     z-index: 1;
+    color:#fff;
+    height: 100%;
   }
 
   .navbar-text button::before {

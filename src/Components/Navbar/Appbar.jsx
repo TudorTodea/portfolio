@@ -43,7 +43,7 @@ const Appbar = () => {
                     <a href="https://www.linkedin.com/in/tudor-todea-18b033245/"><FiLinkedin  className='icon' size={22}/></a>
                     <a href="https://www.instagram.com/todeatudor1/"><FiInstagram  className='icon' size={22}/></a>
                 </div>
-                <button  onClick={() => console.log("connect")}><span>Get in touch</span></button>
+                <button  onClick={() => console.log("connect")}><a style={{ textDecoration:'none'}} href='#connect'>Get in touch</a></button>
             </span>
         </Navbar.Collapse>
     </Container>
