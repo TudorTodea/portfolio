@@ -48,6 +48,6 @@ app.post(`/api/form`, (req, res) => {
     smtpTransport.close();
 })
 
-const server = app.listen(5000, () => {
+const server = app.listen(5000, '0.0.0.0', () => {
     console.log(`Server started on Port 5000 `)
 })
