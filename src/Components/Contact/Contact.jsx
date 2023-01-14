@@ -31,7 +31,7 @@ const Contact = () => {
 e.preventDefault();
         try {
 
-            const resp = await axios.post('http://localhost:5000/api/form', formDetails);
+            const resp = await axios.post('https://portfolio-api-781l.onrender.com/api/form', formDetails);
             toast.success('The Message was succesfully sent!', toastOptions)
             setFormDetails(formInitialDetails);
         } catch (err) {
