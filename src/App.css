@@ -37,3 +37,11 @@ input:focus, textarea:focus, select:focus {
 		padding: 0 150px;
 	}
 }
+
+@media only screen and (max-width : 768px) {
+  .animate__animated {
+    transition-property: none !important;
+    transform: none !important;
+    animation: none !important;
+  }
+}

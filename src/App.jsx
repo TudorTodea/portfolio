@@ -7,6 +7,7 @@ import Projects from './Components/Projects/Projects';
 import Contact from './Components/Contact/Contact';
 import Footer from './Components/Footer/Footer';
 import 'animate.css';
+import About from './Components/About/About';
 function App() {
 
 
@@ -14,6 +15,7 @@ function App() {
     <div className="App">
      <Appbar/>
      <Hero/>
+     <About/>
      <Skills/>
      <Projects/>
      <Contact/>

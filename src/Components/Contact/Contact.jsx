@@ -47,7 +47,7 @@ e.preventDefault();
         <Col md={6}>
         <TrackVisibility once offset={300} >
                     {({isVisible})=>
-                     <div className={isVisible ? "animate__animated animate__fadeInUp":"animate__animated animate__fadeOutUp"}>
+                     <div className={isVisible ? "animate__animated animate__fadeInUp":"animate__animated animate__fadeOutDown"}>
                     <img src={ContactSvg} alt='Contact Me'/>
                     </div>}
                     </TrackVisibility>
@@ -61,7 +61,7 @@ e.preventDefault();
                 <form onSubmit={handleSubmit}>
                 <TrackVisibility once offset={200} >
                     {({isVisible})=>
-                    <Row className={isVisible ? "animate__animated animate__fadeInRight":"animate__animated animate__fadeOutRight"}>
+                    <Row className={isVisible ? "animate__animated animate__fadeInLeft":"animate__animated animate__fadeOutRight"}>
                         <Col sm={6} className="px-1">
                       
                             <input type='text' value={formDetails.firstName} required placeholder='First Name' onChange={(e)=>onFormUpdate('firstName',e.target.value)}/>
