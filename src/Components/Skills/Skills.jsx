@@ -10,6 +10,7 @@ import MaterialUiImg from '../../assets//img/material-ui-logo.svg'
 import HtmlImg from '../../assets//img/html-logo.svg'
 import CssImg from '../../assets//img/css-logo.svg'
 import GitImg from '../../assets//img/git-logo.svg'
+import TypescriptImg from '../../assets/img/typescript.svg'
 import TrackVisibility from 'react-on-screen';
 import './Skills.css'
 const Skills = () => {
@@ -41,7 +42,7 @@ const Skills = () => {
                     <h2>Skills</h2>
                     <p>This is the stack I currently work with</p>
    
-        <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
+        <Carousel responsive={responsive}  infinite={true} className="owl-carousel owl-theme skill-slider">
                         <div className="item">
                             <img src={reactImg}alt="React Image"/>
                             <h5 >React</h5>
@@ -49,6 +50,10 @@ const Skills = () => {
                         <div className="item">
                         <img src={JSImg}alt="JS Image"/>
                             <h5>JavaScript</h5>
+                        </div>
+                        <div className="item">
+                        <img src={TypescriptImg}alt="TS Image"/>
+                            <h5>TypeScript</h5>
                         </div>
                         <div className="item">
                         <img src={NodeImg}alt="Node Image"/>

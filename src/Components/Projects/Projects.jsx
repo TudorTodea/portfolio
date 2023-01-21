@@ -55,13 +55,13 @@ const Projects = () => {
         <Col>
         <TrackVisibility once  offset={100}>
         {({isVisible})=>
-        <h2 className={isVisible ? "animate__animated animate__fadeInDown":"animate__animated animate__fadeOutDown"}>
+        <h2 className={isVisible ? "animate__animated animate__fadeInDown":"animate__animated animate__fadeOut"}>
           Projects
           </h2>
 }</TrackVisibility>
           <TrackVisibility once offset={350} >
                     {({isVisible})=>
-          <Row className={isVisible ? "animate__animated animate__fadeInLeft":"animate__animated animate__fadeOutUp"}>
+          <Row className={isVisible ? "animate__animated animate__fadeInLeft":"animate__animated animate__fadeOut"}>
                   {
                     projects.map((project,index)=>{
                       return(
