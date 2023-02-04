@@ -10,6 +10,7 @@ import MaterialUiImg from '../../assets//img/material-ui-logo.svg'
 import HtmlImg from '../../assets//img/html-logo.svg'
 import CssImg from '../../assets//img/css-logo.svg'
 import GitImg from '../../assets//img/git-logo.svg'
+import SassImg from "../../assets/img/sass-logo.svg"
 import TypescriptImg from '../../assets/img/typescript.svg'
 import TrackVisibility from 'react-on-screen';
 import './Skills.css'
@@ -76,9 +77,14 @@ const Skills = () => {
                             <h5 >HTML5</h5>
                         </div>
                         <div className="item ">
+                        <img src={SassImg} alt="CSS Image"/>
+                            <h5 >SASS</h5>
+                        </div>
+                        <div className="item ">
                         <img src={CssImg} alt="CSS Image"/>
                             <h5 >CSS3</h5>
                         </div>
+                      
                         <div className="item ">
                         <img src={GitImg} alt="Git Image"/>
                             <h5 >Git</h5>
